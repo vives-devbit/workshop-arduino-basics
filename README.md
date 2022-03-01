@@ -2,6 +2,11 @@
 
 Workshop for high school students on the basics of Arduino, C++ and Internet of Things.
 
+## Presentation
+
+HTML: [View](https://vives-devbit.github.io/workshop-arduino-basics/slides.html)
+PDF: [Download](https://vives-devbit.github.io/workshop-arduino-basics/slides.pdf)
+
 ## Development
 
 Install the [marp cli](https://github.com/marp-team/marp-cli) tool:
