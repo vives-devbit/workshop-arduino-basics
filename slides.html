@@ -207,7 +207,163 @@ TODO: Wat is nu eigenlijk een microcontroller?</p>
 }
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-advanced-background="background" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:50%;"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://via.placeholder.com/150&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="20" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:50%;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-advanced-background="background" data-marpit-advanced-background-split="left" style="--marpit-advanced-background-split:25%;"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./img/variable.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="75%" height="720" x="25%"><section id="20" data-marpit-advanced-background="content" data-marpit-advanced-background-split="left" style="--marpit-advanced-background-split:25%;">
+<h1>Variabelen</h1>
+<ul>
+<li>Een variabel is een symbolische naam voor een geheugen locatie</li>
+<li>Een variabel kan een getal, tekst, karakter, ... bevatten</li>
+<li>Een variabel kan van waarde veranderen</li>
+<li>We kunnen er ook bewerkingen op uitvoeren</li>
+</ul>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21">
+<h2>Variabelen - Declareren</h2>
+<ul>
+<li>Variabelen moeten we eerst declareren = creeren</li>
+<li>We geven de variabel een <strong>naam</strong></li>
+<li>Geven ook aan welk <strong>type</strong> het is</li>
+<li>En we kunnen ook een 1ste <strong>waarde</strong> meegeven</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22">
+<h2>Variabelen - Declareren</h2>
+<ul>
+<li>
+<p>Hoe?</p>
+<ul>
+<li><code>type naam = waarde;</code></li>
+</ul>
+</li>
+<li>
+<p>Een paar voorbeelden:</p>
+</li>
+</ul>
+<pre><code class="language-cpp"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-comment">// int = een getal</span>
+<span class="hljs-keyword">int</span> leeftijd = <span class="hljs-number">34</span>;
+
+<span class="hljs-comment">// String = tekst</span>
+String naam = <span class="hljs-string">&quot;Nico&quot;</span>;
+
+<span class="hljs-comment">// double = komma-getal</span>
+<span class="hljs-keyword">double</span> pi = <span class="hljs-number">3.14</span>;
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23">
+<h2>Variabelen - Declareren</h2>
+<ul>
+<li>Types: <code>int</code>, <code>double</code>, <code>String</code> (er zijn er nog andere)</li>
+<li>Kiezen van de naam
+<ul>
+<li>Geen spaties of speciale tekens</li>
+<li>Beschrijvend</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24">
+<h2>Variabelen - Printen</h2>
+<ul>
+<li>De waarde van een variabel kunnen we tonen door deze uit te printen</li>
+</ul>
+<pre><code class="language-cpp"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-comment">// Eerst printen we een beetje tekst</span>
+Serial.<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;De variabel naam: &quot;</span>);
+
+<span class="hljs-comment">// Dan kunnen we de waarde van de variabel printen</span>
+Serial.<span class="hljs-built_in">println</span>(naam);
+</span></span></foreignObject></svg></code></pre>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25">
+<h2>Variabelen - Veranderen van waarde</h2>
+<ul>
+<li>De waarde van een variabel kunnen we ook veranderen met <code>=</code></li>
+</ul>
+<pre><code class="language-cpp"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-comment">// Veranderen van de waarde van een variabel</span>
+naam = <span class="hljs-string">&quot;Chuck Norris&quot;</span>;
+
+<span class="hljs-comment">// Of van een getal variabel</span>
+leeftijd = <span class="hljs-number">35</span>;
+</span></span></foreignObject></svg></code></pre>
+<ul>
+<li>Merk op dat enkel de variabel naam links plaatsen (geen type)</li>
+<li>Als je deze nu opnieuw print zal je de nieuwe waarde zien</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26">
+<h2>Variabelen - Demo Sketch</h2>
+<ul>
+<li>Ga naar <code>Bestand =&gt; Openen</code> en selecteer <code>02-variabelen</code></li>
+<li>Bovenaan zie je een aantal variabelen gedeclareerd</li>
+<li>In <code>loop()</code> printen we de waarde van de variabelen</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27">
+<h2>Variabelen - Oefening</h2>
+<ul>
+<li>Verander de waarde van de variabel <code>naam</code> door je eigen naam
+<ul>
+<li>Doe dit bij het maken van de variabel (helemaal bovenaan)</li>
+</ul>
+</li>
+<li>Maak <code>pi</code> nauwkeuriger door er <code>3.1415</code> van te maken
+<ul>
+<li>Doe dit in <code>setup()</code></li>
+</ul>
+</li>
+<li>Verander <code>leeftijd</code> naar je eigen leeftijd
+<ul>
+<li>Doe dit in <code>loop()</code></li>
+</ul>
+</li>
+</ul>
+<p><em>Kan je verklaren wat het verschil is tussen deze 3 manieren?</em></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28">
+<h2>Variabelen - Oplossing</h2>
+<ul>
+<li><code>naam</code> veranderen bovenaan</li>
+</ul>
+<pre><code class="language-cpp"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-comment">// String = tekst</span>
+String naam = <span class="hljs-string">&quot;Chuck Norris&quot;</span>;
+</span></span></foreignObject></svg></code></pre>
+<p><em>Hier wordt de 1ste waarde aangepast op het moment dat we de variabel maken</em></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29">
+<h2>Variabelen - Oplossing</h2>
+<ul>
+<li><code>pi</code> veranderen in <code>setup()</code></li>
+</ul>
+<pre><code class="language-cpp"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+
+  <span class="hljs-comment">// Instellen van de snelheid waarmee we data naar de computer sturen</span>
+  SerialUSB.<span class="hljs-built_in">begin</span>(<span class="hljs-number">9600</span>);
+
+  <span class="hljs-comment">// pi aanpassen naar nauwkeurigere waarde</span>
+  pi = <span class="hljs-number">3.1415</span>;
+
+}
+</span></span></foreignObject></svg></code></pre>
+<p><em><code>pi</code> is bij declaratie <code>3.14</code>, dan wordt <code>setup()</code> uitgevoerd en hier passen we de waarde aan naar <code>3.1415</code></em></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30">
+<h2>Variabelen - Oplossing</h2>
+<ul>
+<li><code>leeftijd</code> veranderen in <code>loop()</code></li>
+</ul>
+<pre><code class="language-cpp"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
+
+  leeftijd = <span class="hljs-number">35</span>;
+
+<span class="hljs-comment">// ...</span>
+</span></span></foreignObject></svg></code></pre>
+<p><em><code>leeftijd</code> is bij declaratie <code>34</code>. Dan gaan we elke keer dat <code>loop()</code> wordt uitgevoerd, de <code>leeftijd</code> aanpassen naar <code>35</code>.</em></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31">
+<h2>Variabelen - Bewerkingen</h2>
+<ul>
+<li>Hoe zouden we de leeftijd kunnen laten toenemen?</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-advanced-background="background" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:50%;"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://via.placeholder.com/150&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="32" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:50%;">
 <h1>TITEL</h1>
 <ul>
 <li>bullet</li>

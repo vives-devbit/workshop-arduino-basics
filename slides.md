@@ -191,6 +191,162 @@ void loop() {
 }
 ```
 
+---
+
+# Variabelen
+
+- Een variabel is een symbolische naam voor een geheugen locatie
+- Een variabel kan een getal, tekst, karakter, ... bevatten
+- Een variabel kan van waarde veranderen
+- We kunnen er ook bewerkingen op uitvoeren
+
+![bg left:25% fit](./img/variable.jpg)
+
+---
+
+## Variabelen - Declareren
+
+- Variabelen moeten we eerst declareren = creeren
+- We geven de variabel een **naam**
+- Geven ook aan welk **type** het is
+- En we kunnen ook een 1ste **waarde** meegeven
+
+---
+
+## Variabelen - Declareren
+
+- Hoe?
+  - `type naam = waarde;`
+
+- Een paar voorbeelden:
+
+```cpp
+// int = een getal
+int leeftijd = 34;
+
+// String = tekst
+String naam = "Nico";
+
+// double = komma-getal
+double pi = 3.14;
+```
+
+---
+
+## Variabelen - Declareren
+
+- Types: `int`, `double`, `String` (er zijn er nog andere)
+- Kiezen van de naam
+  - Geen spaties of speciale tekens
+  - Beschrijvend
+
+---
+
+## Variabelen - Printen
+
+- De waarde van een variabel kunnen we tonen door deze uit te printen
+
+```cpp
+// Eerst printen we een beetje tekst
+Serial.print("De variabel naam: ");
+
+// Dan kunnen we de waarde van de variabel printen
+Serial.println(naam);
+```
+
+---
+
+## Variabelen - Veranderen van waarde
+
+- De waarde van een variabel kunnen we ook veranderen met `=`
+
+```cpp
+// Veranderen van de waarde van een variabel
+naam = "Chuck Norris";
+
+// Of van een getal variabel
+leeftijd = 35;
+```
+
+- Merk op dat enkel de variabel naam links plaatsen (geen type)
+- Als je deze nu opnieuw print zal je de nieuwe waarde zien
+
+
+---
+
+## Variabelen - Demo Sketch
+
+- Ga naar `Bestand => Openen` en selecteer `02-variabelen`
+- Bovenaan zie je een aantal variabelen gedeclareerd
+- In `loop()` printen we de waarde van de variabelen
+
+---
+
+## Variabelen - Oefening
+
+- Verander de waarde van de variabel `naam` door je eigen naam
+  - Doe dit bij het maken van de variabel (helemaal bovenaan)
+- Maak `pi` nauwkeuriger door er `3.1415` van te maken
+  - Doe dit in `setup()`
+- Verander `leeftijd` naar je eigen leeftijd
+  - Doe dit in `loop()`
+
+*Kan je verklaren wat het verschil is tussen deze 3 manieren?*
+
+---
+
+## Variabelen - Oplossing
+
+- `naam` veranderen bovenaan
+
+```cpp
+// String = tekst
+String naam = "Chuck Norris";
+```
+
+*Hier wordt de 1ste waarde aangepast op het moment dat we de variabel maken*
+
+---
+
+## Variabelen - Oplossing
+
+- `pi` veranderen in `setup()`
+
+```cpp
+void setup() {
+
+  // Instellen van de snelheid waarmee we data naar de computer sturen
+  SerialUSB.begin(9600);
+
+  // pi aanpassen naar nauwkeurigere waarde
+  pi = 3.1415;
+
+}
+```
+
+*`pi` is bij declaratie `3.14`, dan wordt `setup()` uitgevoerd en hier passen we de waarde aan naar `3.1415`*
+
+---
+
+## Variabelen - Oplossing
+
+- `leeftijd` veranderen in `loop()`
+
+```cpp
+void loop() {
+
+  leeftijd = 35;
+
+// ...
+```
+
+*`leeftijd` is bij declaratie `34`. Dan gaan we elke keer dat `loop()` wordt uitgevoerd, de `leeftijd` aanpassen naar `35`.*
+
+---
+
+## Variabelen - Bewerkingen
+
+- Hoe zouden we de leeftijd kunnen laten toenemen?
 
 ---
 

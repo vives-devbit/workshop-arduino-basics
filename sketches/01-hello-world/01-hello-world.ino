@@ -2,8 +2,10 @@
 // Hier gaan we om de seconde "Hello World!" naar de computer sturen.
 
 
+/////////////////////////////////////////////////////////
 // Initializatie code
 // Wordt 1x uitgevoerd bij het opstarten
+/////////////////////////////////////////////////////////
 void setup() {
 
   // Instellen van de snelheid waarmee we data naar de computer sturen
@@ -11,8 +13,10 @@ void setup() {
 
 }
 
+/////////////////////////////////////////////////////////
 // Het hoofdprogramma
 // Dit wordt telkens opnieuw uitgevoerd
+/////////////////////////////////////////////////////////
 void loop() {
 
   // Tekst versturen naar de computer
