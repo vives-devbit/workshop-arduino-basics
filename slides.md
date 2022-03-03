@@ -27,10 +27,12 @@ TODO:
 
 # Hoe pakken we dit aan?
 
-- Heel praktisch
-- Kleine stukjes theorie
-- Veel zelf doen
-- Experimenteren
+- Voormiddag:
+  - Kleine stukjes theorie (voormiddag)
+  - Met kleine oefeningen
+- Namiddag:
+  - Veel zelf doen
+  - Experimenteren
 
 ![bg left:45% fit](./img/hands-on.jpg)
 
@@ -271,7 +273,6 @@ leeftijd = 35;
 - Merk op dat enkel de variabel naam links plaatsen (geen type)
 - Als je deze nu opnieuw print zal je de nieuwe waarde zien
 
-
 ---
 
 ## Variabelen - Demo Sketch
@@ -376,6 +377,202 @@ d = (10 * 10) + 5;
 ```cpp
 teller = teller + 1;
 ```
+
+---
+
+# Hardware
+
+- Het leuke aan microcontrollers en dergelijke is dat we er hardware kunnen aan koppelen
+  - Onder de vorm van shields
+  - Of aparte sensoren en actuatoren
+
+![bg left:35% fit](./img/stacked-shields.jpg)
+
+---
+
+## Hardware - Sensoren en Actuatoren
+
+- Voorbeelden
+  - Een lichtje - aka LED
+  - Een knop - aka button
+  - Een temperatuur sensor
+  - Een vochtsensor
+  - Een geluid alarm - aka buzzer
+  - Een servo motor
+  - ...
+
+![bg left:35% fit](./img/arduino-pic.jpg)
+
+---
+
+## Hardware - Koppelen
+
+- Komt wel wat bij kijken
+  - Correcte aansluiting
+  - Spanningsniveau (5V, 3V3, ...)
+  - Communicatie protocol (hoe ermee praten)
+  - Libraries (software)
+  - ...
+
+![bg right:30% fit](./img/question-mark-guy.jpg)
+
+---
+
+## Hardware - Koppelen
+
+- Arduino helpt hier heel veel
+  - Veel informatie online / boeken
+  - Starter kits
+  - Click shields
+
+![bg right fit](./img/arduino-projects-book.jpg)
+
+---
+
+## Hardware - Grove
+
+- Gestandardiseerd protype systeem
+- Makkelijk connecteerbaar maken
+- Voorbeelden van code online
+- Bestaat uit
+  - Adapterbord
+  - Module (sensoren - actuatoren)
+  - 4-pins connector
+
+![bg right fit](./img/grove-modules.jpg)
+
+---
+
+## Hardware - Blinky LED
+
+- We maken de "Hello World" van microcontrollers
+- Een lichtje dat aan en uit gaat - aka "Blinky"
+
+![bg right:35% fit](./img/seeedstudio_red_led.jpg)
+
+---
+
+### Hardware - Blinky - Benodigdheden
+
+- Arduino
+- Grove Shield
+- LED Module
+- Een gekleurde LED
+
+![bg right fit vertical](./img/Arduino_Uno_-_R3.jpg)
+![bg right fit](./img/base_shield.jpg)
+![bg right fit](./img/Red_LED_s.jpg)
+
+---
+
+### Hardware - Blinky - Aansluiten
+
+- Klik het shield voorzichtig op de Arduino
+- Sluit de kabel aan op de `D2` connector
+  - `D` = digitaal
+- Zet de schakelaar op `5V`
+- Sluit de LED module aan
+- Stop een LED in de module
+  - Let op de vorm
+
+![bg left:35% fit vertical](./img/led.png)
+![bg left:35% fit](./img/seeedstudio_red_led.jpg)
+
+---
+
+### Hardware - Blinky - Demo Sketch
+
+- Ga naar `Bestand => Openen` en selecteer `03-blinky`
+- Druk op de pijl naar rechts ➡️ om te compileren en flashen
+
+TODO: GIF van eindresultaat?
+
+*Meer informatie vind je op [https://wiki.seeedstudio.com/Grove-Red_LED/](https://wiki.seeedstudio.com/Grove-Red_LED/)*
+
+---
+
+### Hardware - Blinky - Analyse
+
+- `pinMode(2, OUTPUT);`
+  - Hiermee stellen we pin `2` in als een digitale uitgang
+    - Digitaal = `1` of `0`
+      - `1` = `5V`
+      - `0` = `0V`
+    - Met een uitgang kunnen we iets aansturen
+  - 1x dus doen we dit in `setup()`
+
+---
+
+### Hardware - Blinky - Analyse
+
+- `digitalWrite(2, HIGH);`
+  - Hiermee maken we pin `2` hoog
+    - hoog = `1` of dus `5V`
+- `digitalWrite(2, LOW);`
+  - Hiermee maken we pin `2` laag
+    - laag = `0` of dus `0V`
+
+![bg right:45% fit](./img/high-low-arduino.jpg)
+
+---
+
+### Hardware - Blinky - Oefening
+
+- Kan je de LED sneller aan en uit laten gaan?
+- Kan je de LED 1 seconde aan laten en 2 seconden uit?
+
+---
+
+### Hardware - Blinky - Oplossing
+
+- Sneller aan / uit
+  - Dit kan door beide delays te verkleinen
+
+```cpp
+void loop() {
+
+  SerialUSB.println("We zetten de LED aan");
+  digitalWrite(2, HIGH);    // Uitgang aanzetten (HOOG = 5V)
+  delay(200);    // Even wachten (200ms = 0.2s)
+
+  SerialUSB.println("We zetten de LED uit");
+  digitalWrite(2, LOW);    // Uitgang uitzetten (LAAG = 0V)
+  delay(200);    // Even wachten (200ms = 0.2s)
+
+}
+```
+
+---
+
+### Hardware - Blinky - Oplossing
+
+- 1 seconde aan / 2 seconden uit
+  - Dit kan door beide delays anders te kiezen
+
+```cpp
+void loop() {
+
+  SerialUSB.println("We zetten de LED aan");
+  digitalWrite(2, HIGH);    // Uitgang aanzetten (HOOG = 5V)
+  delay(1000);    // Even wachten (1000ms = 1s)
+
+  SerialUSB.println("We zetten de LED uit");
+  digitalWrite(2, LOW);    // Uitgang uitzetten (LAAG = 0V)
+  delay(2000);    // Even wachten (2000ms = 2s)
+
+}
+```
+
+---
+
+# TITEL
+
+- bullet
+- bullet
+- bullet
+- bullet
+
+![bg right fit](https://via.placeholder.com/150)
 
 ---
 
