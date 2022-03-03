@@ -36,6 +36,6 @@ void loop() {
 
   SerialUSB.println("We zetten de LED uit");
   digitalWrite(2, LOW);    // Uitgang uitzetten (LAAG = 0V)
-  delay(2000);    // Even wachten (1000ms = 1s)
+  delay(1000);    // Even wachten (1000ms = 1s)
 
 }
