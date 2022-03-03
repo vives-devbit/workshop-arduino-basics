@@ -96,6 +96,10 @@ TODO: Wat is nu eigenlijk een microcontroller?
 
 ---
 
+![bg](./img/hello_world_bg.png)
+
+---
+
 # Starten met "Hello World"
 
 - In de wereld van programmeren starten we altijd met "Hello World"
@@ -192,6 +196,10 @@ void loop() {
 
 }
 ```
+
+---
+
+![bg](./img/arduino-variable-variables3.jpg)
 
 ---
 
@@ -380,6 +388,10 @@ teller = teller + 1;
 
 ---
 
+![bg](./img/prototype.jpg)
+
+---
+
 # Hardware
 
 - Het leuke aan microcontrollers en dergelijke is dat we er hardware kunnen aan koppelen
@@ -531,11 +543,11 @@ TODO: GIF van eindresultaat?
 ```cpp
 void loop() {
 
-  SerialUSB.println("We zetten de LED aan");
+  Serial.println("We zetten de LED aan");
   digitalWrite(2, HIGH);    // Uitgang aanzetten (HOOG = 5V)
   delay(200);    // Even wachten (200ms = 0.2s)
 
-  SerialUSB.println("We zetten de LED uit");
+  Serial.println("We zetten de LED uit");
   digitalWrite(2, LOW);    // Uitgang uitzetten (LAAG = 0V)
   delay(200);    // Even wachten (200ms = 0.2s)
 
@@ -552,16 +564,127 @@ void loop() {
 ```cpp
 void loop() {
 
-  SerialUSB.println("We zetten de LED aan");
+  Serial.println("We zetten de LED aan");
   digitalWrite(2, HIGH);    // Uitgang aanzetten (HOOG = 5V)
   delay(1000);    // Even wachten (1000ms = 1s)
 
-  SerialUSB.println("We zetten de LED uit");
+  Serial.println("We zetten de LED uit");
   digitalWrite(2, LOW);    // Uitgang uitzetten (LAAG = 0V)
   delay(2000);    // Even wachten (2000ms = 2s)
 
 }
 ```
+
+---
+
+## Hardware - Button
+
+- De simpelste sensor die we kunnen bedenken is een drukknop
+- Koppelen we aan digitale **ingang**
+  - Indrukken = HOOG = `1` = `5V`
+  - Loslaten = LAAG = `0` = `0V`
+
+![bg right:35% fit](./img/grove_push_button.jpg)
+
+---
+
+### Hardware - Button - Aansluiten
+
+- Klik het shield voorzichtig op de Arduino
+- Sluit de kabel aan op de `D3` connector
+  - `D` = digitaal
+- Zet de schakelaar op `5V`
+- Sluit de BUTTON module aan
+
+![bg left:35% fit](./img/push_button_connection.jpg)
+
+---
+
+### Hardware - Button - Demo Sketch
+
+- Ga naar `Bestand => Openen` en selecteer `04-button`
+- Druk op de pijl naar rechts ➡️ om te compileren en flashen
+
+*Meer informatie vind je op [https://wiki.seeedstudio.com/Grove-Button/](https://wiki.seeedstudio.com/Grove-Button/)*
+
+---
+
+### Hardware - Button - Analyse
+
+- `pinMode(3, INPUT);`
+  - Hiermee stellen we pin `3` in als een digitale ingang
+    - Digitaal = `1` of `0`
+      - `1` = `5V` = knop ingedrukt
+      - `0` = `0V` = knop los gelaten
+    - Met een ingang kunnen we iets inlezen
+  - 1x dus doen we dit in `setup()`
+
+---
+
+### Hardware - Button - Analyse
+
+- `int knop = digitalRead(3);`
+  - Hiermee kunnen we de staat van een ingang binnenlezen
+  - Het resultaat slaan we op in de variabel `knop`
+
+![bg right:45% fit](./img/high-low-arduino.jpg)
+
+---
+
+### Hardware - Button - Oefening
+
+- Kan je nu de LED aansturen met de knop?
+
+![bg left:40% fit](./img/button-led.jpg)
+
+---
+
+### Hardware - Button - Oplossing
+
+- Dit kan inderdaad. We kunnen de waarde in de variabel `knop` naar `D2` schrijven:
+
+- In `setup()` moeten we `D2` als uitgang zetten:
+
+```cpp
+// Configureer D2 als een digitale uitgang
+pinMode(2, OUTPUT);
+
+// Configureer D3 als een digitale ingang
+pinMode(3, INPUT);
+```
+
+---
+
+### Hardware - Button - Oplossing
+
+- In `loop()` kunnen we `D2` (de LED) aansturen met de waarde van `D3` (de knop)
+- Dus in plaats van `LOW` of `HIGH` te schrijven, sturen we de waarde van `knop`:
+
+```cpp
+void loop() {
+
+  int knop = digitalRead(3);
+  Serial.print("De toestand van de knop is: ");
+  Serial.println(knop);
+
+  // Zet de uitgang gelijk aan de stand van de knop
+  digitalWrite(2, knop);
+
+  delay(1000);    // Even wachten (1000ms = 1s)
+
+}
+```
+
+---
+
+# TITEL
+
+- bullet
+- bullet
+- bullet
+- bullet
+
+![bg right fit](https://via.placeholder.com/150)
 
 ---
 
