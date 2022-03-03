@@ -221,7 +221,7 @@ void loop() {
 - Een paar voorbeelden:
 
 ```cpp
-// int = een getal
+// int = een getal (kan ook negatief zijn)
 int leeftijd = 34;
 
 // String = tekst
@@ -316,7 +316,7 @@ String naam = "Chuck Norris";
 void setup() {
 
   // Instellen van de snelheid waarmee we data naar de computer sturen
-  SerialUSB.begin(9600);
+  Serial.begin(9600);
 
   // pi aanpassen naar nauwkeurigere waarde
   pi = 3.1415;
@@ -337,16 +337,56 @@ void loop() {
 
   leeftijd = 35;
 
-// ...
+  // ...
 ```
 
-*`leeftijd` is bij declaratie `34`. Dan gaan we elke keer dat `loop()` wordt uitgevoerd, de `leeftijd` aanpassen naar `35`.*
+*`leeftijd` is bij declaratie `34`. Vervolgens gaan we elke keer dat `loop()` wordt uitgevoerd, de `leeftijd` aanpassen naar `35`.*
 
 ---
 
-## Variabelen - Bewerkingen
+## Variabelen - Wiskundige Bewerkingen
 
-- Hoe zouden we de leeftijd kunnen laten toenemen?
+- Variabelen kunnen ook worden gebruikt in bewerkingen
+- Gelijklopend met de wiskundige bewerkingen
+- Voorbeelden (`a`, `b`, `c`, ... zijn `int` variabelen)
+
+```cpp
+a = a + 15;
+b = a - c;
+c = 45 / 9;
+d = (10 * 10) + 5;
+```
+
+*Merk op dat je ook haakjes mag gebruiken*
+
+---
+
+## Variabelen - Wiskundige Bewerkingen - Oefening
+
+- Zorg er voor dat de variabel `teller` elke iteratie van `loop()` met `1` wordt verhoogt.
+
+![bg right:35% fit](./img/counter.jpg)
+
+---
+
+## Variabelen - Wiskundige Bewerkingen - Oplossing
+
+- Je kan hiervoor volgende bewerking gebruiken
+
+```cpp
+teller = teller + 1;
+```
+
+---
+
+# TITEL
+
+- bullet
+- bullet
+- bullet
+- bullet
+
+![bg right fit](https://via.placeholder.com/150)
 
 ---
 
