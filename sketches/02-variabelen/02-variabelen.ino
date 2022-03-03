@@ -17,6 +17,9 @@ String naam = "Nico";
 // double = komma-getal
 double pi = 3.14;
 
+// Een variable als teller
+int teller = 0;
+
 /////////////////////////////////////////////////////////
 // Initializatie code
 // Wordt 1x uitgevoerd bij het opstarten
@@ -56,6 +59,10 @@ void loop() {
   SerialUSB.print("PI = ");
   SerialUSB.println(pi);
   SerialUSB.println();
+
+  // Een teller als variabel
+  SerialUSB.print("De variabel teller heeft de waarde ");
+  SerialUSB.println(teller);
 
   // Even wachten (1000ms = 1s)
   delay(1000);
