@@ -710,7 +710,157 @@ d = (<span class="hljs-number">10</span> * <span class="hljs-number">10</span>) 
 }
 </span></span></foreignObject></svg></code></pre>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-advanced-background="background" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:50%;"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://via.placeholder.com/150&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="59" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:50%;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./img/decisions.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="59" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="60">
+<h1>Beslissingen maken in code</h1>
+<ul>
+<li>Beslissingen kunnen we in code maken aan de hand van <code>if-else</code> structuren</li>
+<li><code>if</code>: als een <strong>conditie waar</strong> is dan doen we iets</li>
+<li><code>else</code>: anders doen we eventueel iets anders</li>
+</ul>
+<p>TODO: Figuur</p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="61">
+<h2>Beslissingen - De conditie</h2>
+<ul>
+<li>De conditie bestaat meestal uit 1 of meerdere vergelijkingen</li>
+<li>Hierbij kunnen we een aantal operatoren van de wiskunde gebruiken:
+<ul>
+<li><code>==</code>: gelijk aan</li>
+<li><code>!=</code>: verschillend van</li>
+<li><code>&gt;</code>: groter dan</li>
+<li><code>&gt;=</code>: groter dan of gelijk aan</li>
+<li><code>&lt;</code>: kleiner dan</li>
+<li><code>&lt;=</code>: kleiner dan of gelijk aan</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="62">
+<h2>Beslissingen - De conditie - Voorbeeld</h2>
+<ul>
+<li>Een voorbeeld van een beslissing
+<ul>
+<li>Toegepast op de <code>04-button</code> sketch</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-cpp"><svg data-marp-fitting="svg" data-marp-fitting-code><foreignObject><span data-marp-fitting-svg-content><span data-marp-fitting-svg-content-wrap><span class="hljs-keyword">if</span> (knop == HIGH) {
+  Serial.<span class="hljs-built_in">println</span>(<span class="hljs-string">&quot;De knop is ingedrukt&quot;</span>);
+} <span class="hljs-keyword">else</span> {
+  Serial.<span class="hljs-built_in">println</span>(<span class="hljs-string">&quot;De knop is niet ingedrukt&quot;</span>);
+}
+</span></span></foreignObject></svg></code></pre>
+<p><em>Probeer dit maar eens uit ...</em></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="63">
+<h2>Hardware - De Buzzer</h2>
+<ul>
+<li>De buzzer is een piezo element dat een geluidstoon uitstuurt</li>
+<li>We kunnen dit sturen via
+<ul>
+<li>een digital signaal: aan of uit</li>
+<li>een analoog signaal: dan genereren we een toon</li>
+</ul>
+</li>
+</ul>
+<p><em>Wij werken voorlopig enkel met het digitale signaal.</em></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-advanced-background="background" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:50%;"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="vertical"><figure style="background-image:url(&quot;./img/Arduino_Uno_-_R3.jpg&quot;);background-size:contain;"></figure><figure style="background-image:url(&quot;./img/base_shield.jpg&quot;);background-size:contain;"></figure><figure style="background-image:url(&quot;./img/buzzer_s.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="64" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:50%;">
+<h2>Hardware - De Buzzer - Benodigdheden</h2>
+<ul>
+<li>Arduino</li>
+<li>Grove Shield</li>
+<li>Buzzer Module</li>
+</ul>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-advanced-background="background" data-marpit-advanced-background-split="left" style="--marpit-advanced-background-split:35%;"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./img/seeeduino_buzzer.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="65%" height="720" x="35%"><section id="65" data-marpit-advanced-background="content" data-marpit-advanced-background-split="left" style="--marpit-advanced-background-split:35%;">
+<h2>Hardware - De Buzzer - Aansluiten</h2>
+<ul>
+<li>Klik het shield voorzichtig op de Arduino</li>
+<li>Sluit de kabel aan op de <code>D4</code> connector
+<ul>
+<li><code>D</code> = digitaal</li>
+</ul>
+</li>
+<li>Zet de schakelaar op <code>5V</code></li>
+<li>Sluit de BUZZEER module aan</li>
+</ul>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="66">
+<h2>Hardware - De Buzzer - Demo Sketch</h2>
+<ul>
+<li>Ga naar <code>Bestand =&gt; Openen</code> en selecteer <code>05-buzzer</code></li>
+<li>Druk op de pijl naar rechts <img class="emoji" draggable="false" alt="➡️" src="https://twemoji.maxcdn.com/2/svg/27a1.svg" data-marp-twemoji=""/> om te compileren en flashen</li>
+</ul>
+<p><em>Meer informatie vind je op <a href="https://wiki.seeedstudio.com/Grove-Buzzer/">https://wiki.seeedstudio.com/Grove-Buzzer/</a></em></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="67">
+<h2>Hardware - De Buzzer - Analyse</h2>
+<ul>
+<li><code>pinMode(4, OUTPUT);</code>
+<ul>
+<li>Hiermee stellen we pin <code>4</code> in als een digitale uitgang
+<ul>
+<li>Digitaal = <code>1</code> of <code>0</code>
+<ul>
+<li><code>1</code> = <code>5V</code></li>
+<li><code>0</code> = <code>0V</code></li>
+</ul>
+</li>
+<li>Met een uitgang kunnen we iets aansturen</li>
+</ul>
+</li>
+<li>1x dus doen we dit in <code>setup()</code></li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="68">
+<h2>Hardware - De Buzzer - Analyse</h2>
+<ul>
+<li><code>digitalWrite(2, HIGH);</code>
+<ul>
+<li>Hiermee maken we pin <code>2</code> hoog
+<ul>
+<li>hoog = <code>1</code> of dus <code>5V</code></li>
+<li>de buzzer maakt geluid</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>digitalWrite(2, LOW);</code>
+<ul>
+<li>Hiermee maken we pin <code>2</code> laag
+<ul>
+<li>laag = <code>0</code> of dus <code>0V</code></li>
+<li>de buzzer maakt geen geluid</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-advanced-background="background"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./img/alarm.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="1280" height="720"><section id="69" data-marpit-advanced-background="content"></section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="70">
+<h2>Logica in Code - Een Alarm</h2>
+<ul>
+<li>Kunnen we nu samen volgende applicatie maken?
+<ul>
+<li>Wanneer je de knop 3 seconden of langer indrukt moet het alarm aangaan.</li>
+<li>Wanneer je de knop 1 seconde indrukt moet het alarm uitgaan.</li>
+</ul>
+</li>
+<li>Wat kan ons allemaal helpen
+<ul>
+<li>Goed nadenken</li>
+<li>Stap per stap uitwerken</li>
+<li>Informatie sturen via <code>Serial.println()</code> naar de computer</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-advanced-background="background" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:50%;"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://via.placeholder.com/150&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="71" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:50%;">
 <h1>TITEL</h1>
 <ul>
 <li>bullet</li>
@@ -719,7 +869,7 @@ d = (<span class="hljs-number">10</span> * <span class="hljs-number">10</span>) 
 <li>bullet</li>
 </ul>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-advanced-background="background" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:50%;"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://via.placeholder.com/150&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="60" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:50%;">
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-advanced-background="background" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:50%;"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://via.placeholder.com/150&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="72" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:50%;">
 <h1>TITEL</h1>
 <ul>
 <li>bullet</li>
@@ -728,16 +878,7 @@ d = (<span class="hljs-number">10</span> * <span class="hljs-number">10</span>) 
 <li>bullet</li>
 </ul>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-advanced-background="background" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:50%;"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://via.placeholder.com/150&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="61" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:50%;">
-<h1>TITEL</h1>
-<ul>
-<li>bullet</li>
-<li>bullet</li>
-<li>bullet</li>
-<li>bullet</li>
-</ul>
-</section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-advanced-background="background" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:50%;"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://via.placeholder.com/150&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="62" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:50%;">
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-advanced-background="background" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:50%;"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://via.placeholder.com/150&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="73" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:50%;">
 <h1>TITEL</h1>
 <ul>
 <li>bullet</li>

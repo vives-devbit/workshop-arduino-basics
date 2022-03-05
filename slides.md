@@ -677,14 +677,132 @@ void loop() {
 
 ---
 
-# TITEL
+![bg fit](./img/decisions.jpg)
 
-- bullet
-- bullet
-- bullet
-- bullet
+---
 
-![bg right fit](https://via.placeholder.com/150)
+# Beslissingen maken in code
+
+- Beslissingen kunnen we in code maken aan de hand van `if-else` structuren
+- `if`: als een **conditie waar** is dan doen we iets
+- `else`: anders doen we eventueel iets anders
+
+TODO: Figuur
+
+---
+
+## Beslissingen - De conditie
+
+- De conditie bestaat meestal uit 1 of meerdere vergelijkingen
+- Hierbij kunnen we een aantal operatoren van de wiskunde gebruiken:
+  - `==`: gelijk aan
+  - `!=`: verschillend van
+  - `>`: groter dan
+  - `>=`: groter dan of gelijk aan
+  - `<`: kleiner dan
+  - `<=`: kleiner dan of gelijk aan
+
+---
+
+## Beslissingen - De conditie - Voorbeeld
+
+- Een voorbeeld van een beslissing
+  - Toegepast op de `04-button` sketch
+
+```cpp
+if (knop == HIGH) {
+  Serial.println("De knop is ingedrukt");
+} else {
+  Serial.println("De knop is niet ingedrukt");
+}
+```
+
+*Probeer dit maar eens uit ...*
+
+---
+
+## Hardware - De Buzzer
+
+- De buzzer is een piezo element dat een geluidstoon uitstuurt
+- We kunnen dit sturen via
+  - een digital signaal: aan of uit
+  - een analoog signaal: dan genereren we een toon
+
+*Wij werken voorlopig enkel met het digitale signaal.*
+
+---
+
+## Hardware - De Buzzer - Benodigdheden
+
+- Arduino
+- Grove Shield
+- Buzzer Module
+
+![bg right fit vertical](./img/Arduino_Uno_-_R3.jpg)
+![bg right fit](./img/base_shield.jpg)
+![bg right fit](./img/buzzer_s.jpg)
+
+---
+
+## Hardware - De Buzzer - Aansluiten
+
+- Klik het shield voorzichtig op de Arduino
+- Sluit de kabel aan op de `D4` connector
+  - `D` = digitaal
+- Zet de schakelaar op `5V`
+- Sluit de BUZZEER module aan
+
+![bg left:35% fit](./img/seeeduino_buzzer.jpg)
+
+---
+
+## Hardware - De Buzzer - Demo Sketch
+
+- Ga naar `Bestand => Openen` en selecteer `05-buzzer`
+- Druk op de pijl naar rechts ➡️ om te compileren en flashen
+
+*Meer informatie vind je op [https://wiki.seeedstudio.com/Grove-Buzzer/](https://wiki.seeedstudio.com/Grove-Buzzer/)*
+
+---
+
+## Hardware - De Buzzer - Analyse
+
+- `pinMode(4, OUTPUT);`
+  - Hiermee stellen we pin `4` in als een digitale uitgang
+    - Digitaal = `1` of `0`
+      - `1` = `5V`
+      - `0` = `0V`
+    - Met een uitgang kunnen we iets aansturen
+  - 1x dus doen we dit in `setup()`
+
+---
+
+## Hardware - De Buzzer - Analyse
+
+- `digitalWrite(2, HIGH);`
+  - Hiermee maken we pin `2` hoog
+    - hoog = `1` of dus `5V`
+    - de buzzer maakt geluid
+- `digitalWrite(2, LOW);`
+  - Hiermee maken we pin `2` laag
+    - laag = `0` of dus `0V`
+    - de buzzer maakt geen geluid
+
+---
+
+![bg fit](./img/alarm.jpg)
+
+---
+
+## Logica in Code - Een Alarm
+
+- Kunnen we nu samen volgende applicatie maken?
+  - Wanneer je de knop 3 seconden of langer indrukt moet het alarm aangaan.
+  - Wanneer je de knop 1 seconde indrukt moet het alarm uitgaan.
+- Wat kan ons allemaal helpen
+  - Goed nadenken
+  - Stap per stap uitwerken
+  - Informatie sturen via `Serial.println()` naar de computer
 
 ---
 
