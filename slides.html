@@ -23,7 +23,7 @@
 <ul>
 <li>Arduino</li>
 <li>Programmeren</li>
-<li>Hardware (sensoren en actuatoren)</li>
+<li>Hardware</li>
 </ul>
 </li>
 </ul>
@@ -31,25 +31,18 @@
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-advanced-background="background" data-marpit-advanced-background-split="left" style="--marpit-advanced-background-split:45%;"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./img/hands-on.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="55%" height="720" x="45%"><section id="4" data-marpit-advanced-background="content" data-marpit-advanced-background-split="left" style="--marpit-advanced-background-split:45%;">
 <h1>Hoe pakken we dit aan?</h1>
 <ul>
-<li>Voormiddag:
-<ul>
-<li>Kleine stukjes theorie (voormiddag)</li>
+<li>Kleine stukjes theorie</li>
 <li>Met kleine oefeningen</li>
-</ul>
-</li>
-<li>Namiddag:
-<ul>
 <li>Veel zelf doen</li>
 <li>Experimenteren</li>
-</ul>
-</li>
 </ul>
 </section>
 </foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5">
 <h1>Wat is Arduino</h1>
 <p>TODO: Wat is Arduino ? Wat is Arduino IDE<br />
 TODO: Welke Arduino's bestaan er allemaal<br />
-TODO: Wat is nu eigenlijk een microcontroller?</p>
+TODO: Wat is nu eigenlijk een microcontroller?<br />
+TODO: Wat kunnen we hiermee doen?</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-advanced-background="background" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:50%;"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./img/computer-instructions.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="6" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:50%;">
 <h1>Wat is Programmeren</h1>
@@ -860,8 +853,100 @@ d = (<span class="hljs-number">10</span> * <span class="hljs-number">10</span>) 
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-advanced-background="background" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:50%;"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://via.placeholder.com/150&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="71" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:50%;">
-<h1>TITEL</h1>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-advanced-background="background" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:35%;"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="vertical"><figure style="background-image:url(&quot;./img/temperature_sensor_analogue.jpg&quot;);background-size:contain;"></figure><figure style="background-image:url(&quot;./img/dht11.jpg&quot;);background-size:contain;"></figure><figure style="background-image:url(&quot;./img/s-l300.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="65%" height="720"><section id="71" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:35%;">
+<h1>Temperatuur sensor</h1>
+<ul>
+<li>Een temperatuur sensor kan de omgevingstemperatuur kan opmeten
+<ul>
+<li>Veel verschillende soorten
+<ul>
+<li>Analoog / i2c / spi / 1-wire</li>
+<li>Temperatuur / Luchtdruk / Luchtvochtigheid</li>
+<li>Nauwkeurigheid</li>
+<li>IC (chip), thermistor, ...</li>
+<li>...</li>
+</ul>
+</li>
+<li>Keuze hangt af van de toepassing</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-advanced-background="background" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:25%;"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./img/Grove_Temperature_Sensor_View_little.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="75%" height="720"><section id="72" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:25%;">
+<h2>Temperatuur sensor - Grove</h2>
+<ul>
+<li>Grove voorziet een 10-tal verschillende temperatuur sensoren</li>
+<li>Wij gebruiken nu een simpele thermistor (temperatuursafhankelijke weerstand)</li>
+<li>Koppelen we aan een <strong>analoge ingang</strong>
+<ul>
+<li>Niet meer <code>1</code> of <code>0</code> (digitaal)</li>
+<li>Maar waarde tussen <code>0</code> en <code>1023</code>
+<ul>
+<li>Stelt spanning voor tussen <code>0</code> en <code>5V</code> (of <code>3V3</code>)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-advanced-background="background" data-marpit-advanced-background-split="left" style="--marpit-advanced-background-split:35%;"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;./img/temperature_sensor_connect.jpg&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="65%" height="720" x="35%"><section id="73" data-marpit-advanced-background="content" data-marpit-advanced-background-split="left" style="--marpit-advanced-background-split:35%;">
+<h2>Temperatuur sensor - Aansluiten</h2>
+<ul>
+<li>Klik het shield voorzichtig op de Arduino</li>
+<li>Sluit de kabel aan op de <code>A0</code> connector
+<ul>
+<li><code>A</code> = analoog</li>
+</ul>
+</li>
+<li>Zet de schakelaar op <code>5V</code></li>
+<li>Sluit de temperatuur sensor module aan</li>
+</ul>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="74">
+<h2>Temperatuur sensor - Demo Sketch</h2>
+<ul>
+<li>Ga naar <code>Bestand =&gt; Openen</code> en selecteer <code>06-temperature-sensor</code></li>
+<li>Druk op de pijl naar rechts <img class="emoji" draggable="false" alt="➡️" src="https://twemoji.maxcdn.com/2/svg/27a1.svg" data-marp-twemoji=""/> om te compileren en flashen</li>
+</ul>
+<p><em>Meer informatie vind je op <a href="https://wiki.seeedstudio.com/Grove-Temperature_Sensor_V1.2/">https://wiki.seeedstudio.com/Grove-Temperature_Sensor_V1.2/</a></em></p>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="75">
+<h2>Temperatuur sensor - Analyse</h2>
+<ul>
+<li><code>pinMode(A0, INPUT);</code>
+<ul>
+<li>Hiermee stellen we pin <code>A0</code> in als een analoge ingang
+<ul>
+<li>Bij het inlezen krijgen we dan getal tussen 0 en 1023</li>
+</ul>
+</li>
+<li>1x dus doen we dit in <code>setup()</code></li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-advanced-background="background" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:20%;"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="vertical"><figure style="background-image:url(&quot;./img/temperature_resistance.png&quot;);background-size:contain;"></figure><figure style="background-image:url(&quot;./img/ntc_equation.png&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="80%" height="720"><section id="76" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:20%;">
+<h2>Temperatuur sensor - Analyse</h2>
+<ul>
+<li>
+<p><code>int voltage = analogRead(A0);</code></p>
+<ul>
+<li>Hiermee kunnen we de huidige &quot;spanning&quot; inlezen op de analoge pin</li>
+</ul>
+</li>
+<li>
+<p>De berekening is heel eigen aan temperatuur en deze sensor</p>
+</li>
+<li>
+<p>Dit haal je uit de datasheet of online</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=wjL7xOGqAqg&amp;t=249s">https://www.youtube.com/watch?v=wjL7xOGqAqg&amp;t=249s</a></li>
+</ul>
+</li>
+</ul>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="77">
+<h2>Temperatuur sensor - Oefening</h2>
 <ul>
 <li>bullet</li>
 <li>bullet</li>
@@ -869,16 +954,7 @@ d = (<span class="hljs-number">10</span> * <span class="hljs-number">10</span>) 
 <li>bullet</li>
 </ul>
 </section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-advanced-background="background" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:50%;"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://via.placeholder.com/150&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="72" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:50%;">
-<h1>TITEL</h1>
-<ul>
-<li>bullet</li>
-<li>bullet</li>
-<li>bullet</li>
-<li>bullet</li>
-</ul>
-</section>
-</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section style="" data-marpit-advanced-background="pseudo"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-advanced-background="background" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:50%;"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://via.placeholder.com/150&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="73" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:50%;">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-marpit-advanced-background="background" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:50%;"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;https://via.placeholder.com/150&quot;);background-size:contain;"></figure></div></section></foreignObject><foreignObject width="50%" height="720"><section id="78" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right" style="--marpit-advanced-background-split:50%;">
 <h1>TITEL</h1>
 <ul>
 <li>bullet</li>
