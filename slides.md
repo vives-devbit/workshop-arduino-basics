@@ -19,7 +19,7 @@ TODO:
 - Vandaag zijn we hier om iets bij te leren over
   - Arduino
   - Programmeren
-  - Hardware (sensoren en actuatoren)
+  - Hardware
 
 ![bg right fit](./img/seeed-arduino-sensor-kit-base.png)
 
@@ -27,12 +27,10 @@ TODO:
 
 # Hoe pakken we dit aan?
 
-- Voormiddag:
-  - Kleine stukjes theorie (voormiddag)
-  - Met kleine oefeningen
-- Namiddag:
-  - Veel zelf doen
-  - Experimenteren
+- Kleine stukjes theorie
+- Met kleine oefeningen
+- Veel zelf doen
+- Experimenteren
 
 ![bg left:45% fit](./img/hands-on.jpg)
 
@@ -43,6 +41,7 @@ TODO:
 TODO: Wat is Arduino ? Wat is Arduino IDE
 TODO: Welke Arduino's bestaan er allemaal
 TODO: Wat is nu eigenlijk een microcontroller?
+TODO: Wat kunnen we hiermee doen?
 
 ---
 
@@ -806,25 +805,86 @@ if (knop == HIGH) {
 
 ---
 
-# TITEL
+# Temperatuur sensor
 
-- bullet
-- bullet
-- bullet
-- bullet
+- Een temperatuur sensor kan de omgevingstemperatuur kan opmeten
+  - Veel verschillende soorten
+    - Analoog / i2c / spi / 1-wire
+    - Temperatuur / Luchtdruk / Luchtvochtigheid
+    - Nauwkeurigheid
+    - IC (chip), thermistor, ...
+    - ...
+  - Keuze hangt af van de toepassing
 
-![bg right fit](https://via.placeholder.com/150)
+![bg right:35% fit vertical](./img/temperature_sensor_analogue.jpg)
+![bg right:35% fit](./img/dht11.jpg)
+![bg right:35% fit](./img/s-l300.jpg)
 
 ---
 
-# TITEL
+## Temperatuur sensor - Grove
+
+- Grove voorziet een 10-tal verschillende temperatuur sensoren
+- Wij gebruiken nu een simpele thermistor (temperatuursafhankelijke weerstand)
+- Koppelen we aan een **analoge ingang**
+  - Niet meer `1` of `0` (digitaal)
+  - Maar waarde tussen `0` en `1023`
+    - Stelt spanning voor tussen `0` en `5V` (of `3V3`)
+
+![bg right:25% fit](./img/Grove_Temperature_Sensor_View_little.jpg)
+
+---
+
+## Temperatuur sensor - Aansluiten
+
+- Klik het shield voorzichtig op de Arduino
+- Sluit de kabel aan op de `A0` connector
+  - `A` = analoog
+- Zet de schakelaar op `5V`
+- Sluit de temperatuur sensor module aan
+
+![bg left:35% fit](./img/temperature_sensor_connect.jpg)
+
+---
+
+## Temperatuur sensor - Demo Sketch
+
+- Ga naar `Bestand => Openen` en selecteer `06-temperature-sensor`
+- Druk op de pijl naar rechts ➡️ om te compileren en flashen
+
+*Meer informatie vind je op [https://wiki.seeedstudio.com/Grove-Temperature_Sensor_V1.2/](https://wiki.seeedstudio.com/Grove-Temperature_Sensor_V1.2/)*
+
+---
+
+## Temperatuur sensor - Analyse
+
+- `pinMode(A0, INPUT);`
+  - Hiermee stellen we pin `A0` in als een analoge ingang
+    - Bij het inlezen krijgen we dan getal tussen 0 en 1023
+  - 1x dus doen we dit in `setup()`
+
+---
+
+## Temperatuur sensor - Analyse
+
+- `int voltage = analogRead(A0);`
+  - Hiermee kunnen we de huidige "spanning" inlezen op de analoge pin
+
+- De berekening is heel eigen aan temperatuur en deze sensor
+- Dit haal je uit de datasheet of online
+  - [https://www.youtube.com/watch?v=wjL7xOGqAqg&t=249s](https://www.youtube.com/watch?v=wjL7xOGqAqg&t=249s)
+
+![bg right:20% fit vertical](./img/temperature_resistance.png)
+![bg right:20% fit](./img/ntc_equation.png)
+
+---
+
+## Temperatuur sensor - Oefening
 
 - bullet
 - bullet
 - bullet
 - bullet
-
-![bg right fit](https://via.placeholder.com/150)
 
 ---
 
