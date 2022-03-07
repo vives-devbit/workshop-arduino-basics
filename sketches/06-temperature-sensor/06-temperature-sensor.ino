@@ -22,7 +22,7 @@ int R0 = 100000;    // R0 = 100k weerstand
 void setup() {
 
   // Instellen van de snelheid waarmee we data naar de computer sturen
-  SerialUSB.begin(9600);
+  Serial.begin(9600);
 
   // Configureer A0 als analoge ingang
   pinMode(A0, INPUT);
@@ -43,9 +43,9 @@ void loop()
   // Dan zetten we dit om naar een temperatuur
   double temperatuur = (1.0 / ((log(R/R0)/B) + (1/298.15))) - 273.15;
 
-  SerialUSB.print("Temperatuur: ");
-  SerialUSB.print(temperatuur);
-  SerialUSB.println("°C");
+  Serial.print("Temperatuur: ");
+  Serial.print(temperatuur);
+  Serial.println("°C");
 
   delay(1000);
 }

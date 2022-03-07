@@ -9,7 +9,7 @@
 void setup() {
 
   // Instellen van de snelheid waarmee we data naar de computer sturen
-  SerialUSB.begin(9600);
+  Serial.begin(9600);
 
 }
 
@@ -20,7 +20,7 @@ void setup() {
 void loop() {
 
   // Tekst versturen naar de computer
-  SerialUSB.println("Hello World!");
+  Serial.println("Hello World!");
 
   // Even wachten (1000ms = 1s)
   delay(1000);

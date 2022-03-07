@@ -15,7 +15,7 @@
 void setup() {
 
   // Instellen van de snelheid waarmee we data naar de computer sturen
-  SerialUSB.begin(9600);
+  Serial.begin(9600);
 
   // Configureer D4 als een digitale uitgang
   pinMode(4, OUTPUT);
@@ -27,11 +27,11 @@ void setup() {
 /////////////////////////////////////////////////////////
 void loop() {
 
-  SerialUSB.println("We zetten de BUZZER aan");
+  Serial.println("We zetten de BUZZER aan");
   digitalWrite(4, HIGH);    // Uitgang aanzetten (HOOG = 5V)
   delay(1000);    // Even wachten (1000ms = 1s)
 
-  SerialUSB.println("We zetten de BUZZER uit");
+  Serial.println("We zetten de BUZZER uit");
   digitalWrite(4, LOW);    // Uitgang uitzetten (LAAG = 0V)
   delay(1000);    // Even wachten (1000ms = 1s)
 
