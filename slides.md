@@ -2,15 +2,31 @@
 marp: true
 ---
 
-# Workshop Arduino Basics <!-- fit -->
+# Welcome to <!-- fit -->
+## Workshop Arduino Basics <!-- fit -->
+### door VIVES - Industriele Wetenschappen en Technologie
 
 ---
 
-# Wie zijn wij
+# Waar ben je?
 
-TODO:
+![width:1268](./img/brugge_0118_0.jpg)
 
-![bg fit right](./img/devbit_rocket.png)
+Campus Brugge Xaverianen
+
+---
+
+# Wie zijn wij?
+
+- De bachelor opleiding elektronica - ICT
+- Wij leren studenten werken met
+  - Elektronica, sensoren, microcontrollers, ....
+  - Internet of Things
+  - Software en Web Development
+  - Netwerken en infrastructuur
+  - Artificiële Intelligentie
+
+![bg fit right:25%](./img/devbit_rocket.png)
 
 ---
 
@@ -19,7 +35,7 @@ TODO:
 - Vandaag zijn we hier om iets bij te leren over
   - Arduino
   - Programmeren
-  - Hardware
+  - Sensoren en hardware
 
 ![bg right fit](./img/seeed-arduino-sensor-kit-base.png)
 
@@ -29,19 +45,127 @@ TODO:
 
 - Kleine stukjes theorie
 - Met kleine oefeningen
-- Veel zelf doen
+- Zelf dingen doen
 - Experimenteren
 
 ![bg left:45% fit](./img/hands-on.jpg)
 
 ---
 
-# Wat is Arduino
+![bg fit](./img/arduino_logo.png)
+
+---
+
+# Wat is Arduino?
+
+- Arduino is een open-source hardware en software bedrijf
+  - Ontwikkelt microcontroller bordjes
+  - Voorziet software voor het programmeren: Arduino IDE
+  - Heeft een website met documentatie, projecten, ...
+    - [https://www.arduino.cc/](https://www.arduino.cc/)
+  - Origineel bedoelt voor studenten van een Italiaanse school
+
+---
+
+## Het hart van de Arduino
+
+- Is een microcontroller
+  - Een kleine "computer" als 1 chip
+  - Bevat een CPU, wat geheugen en I/O
+- Dit voert instructies uit
+- Koppelt aan hardware (sensoren en dergelijke)
+- Doet uit zichzelf niets ! Moet geprogrammeerd worden.
+
+![bg fit left:25%](./img/Microcontrollers_Atmega32_Atmega8.jpg)
+
+---
+
+# Wat kunnen we hiermee allemaal? <!-- fit -->
+
+---
+
+## Een robot bouwen
+
+![bg fit right](./img/arduino_robot.jpg)
+
+---
+
+## Een plotter
+
+![bg fit left](./img/plotter.jpg)
+
+---
+
+## Een game controller
+
+![bg fit right](./img/14-game_controller.jpg)
+
+---
+
+## LED Toepassingen
+
+![bg fit left vertical](./img/07-disco_ball.jpg)
+![bg fit left](./img/04-bookcase_LEDS.jpg)
+
+---
+
+## Een automatische cocktail bar
+
+![bg fit right](./img/02-inebriator.jpg)
+
+---
+
+![bg fit](./img/F043Z91IRXTPPDH.jpg)
+
+---
+
+## Een DIY zuurstof respirator
+
+![bg fit left](./img/nevon-diy-ventilator.jpg)
+
+---
+
+## De mogelijkheden zijn eindeloos
+
+- Je kan het eigenlijk zo zot niet bedenken
+- Heel toegankelijk voor jongeren
+- Super veel informatie verkrijgbaar
+  - [https://docs.arduino.cc/](https://docs.arduino.cc/)
+  - [https://maker.pro/arduino/projects](https://maker.pro/arduino/projects)
+- Niet te duur
+- Wordt zelfs in bedrijven gebruikt om prototypes te bouwen
+
+![bg fit right:45%](./img/arduino_docs.png)
+
+---
+
+# Welke Arduino's bestaan er allemaal
+
+- Eigenlijk teveel om op te noemen
+- Je hebt officiële Arduino boards
+- Je hebt Arduino compatibele boards
+
+![bg fit left](./img/different-Arduino-board.jpg)
+
+---
+
+# Wat is Arduino?
 
 TODO: Wat is Arduino ? Wat is Arduino IDE
 TODO: Welke Arduino's bestaan er allemaal
 TODO: Wat is nu eigenlijk een microcontroller?
-TODO: Wat kunnen we hiermee doen?
+
+---
+
+# Wat is Arduino?
+
+TODO: Wat is Arduino ? Wat is Arduino IDE
+TODO: Welke Arduino's bestaan er allemaal
+TODO: Wat is nu eigenlijk een microcontroller?
+
+---
+
+![bg](./img/matrix.jpg)
 
 ---
 
