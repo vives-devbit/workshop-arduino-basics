@@ -1,0 +1,84 @@
+#!/usr/bin/env bash
+
+# Call me with: 
+#   bash <(curl -sL http://bit.do/workshop-arduino)
+
+function pause() {
+   read -p "$* [ENTER TO CONTINUE]"
+}
+
+echo ""
+echo "                   _       _                      "
+echo "     /\\           | |     (_)                     "
+echo "    /  \\   _ __ __| |_   _ _ _ __   ___           "
+echo "   / /\\ \\ | '__/ _\` | | | | | '_ \\ / _ \\          "
+echo "  / ____ \\| | | (_| | |_| | | | | | (_) |         "
+echo " /_/    \\_\\_|__\\__,_|\\__,_|_|_| |_|\\___/          "
+echo " \\ \\        / /       | |      | |                "
+echo "  \\ \\  /\\  / /__  _ __| | _____| |__   ___  _ __  "
+echo "   \\ \\/  \\/ / _ \\| '__| |/ / __| '_ \\ / _ \\| '_ \\ "
+echo "    \\  /\\  / (_) | |  |   <\\__ \\ | | | (_) | |_) |"
+echo "     \\/  \\/ \\___/|_|  |_|\\_\\___/_| |_|\\___/| .__/ "
+echo "                                           | |    "
+echo "                                           |_|    "
+echo ""
+echo "Setting up Raspberry Pi for the Arduino workshop"
+echo "Sit back, this is going to take a while ..."
+
+echo "-------------------------------------------"
+echo "Updating the system"
+echo "-------------------------------------------"
+sudo apt update
+sudo apt upgrade -y
+
+echo "-------------------------------------------"
+echo "Installing basic dependencies"
+echo "-------------------------------------------"
+sudo apt -y install git
+sudo apt -y install mosquitto
+sudo apt -y install build-essential curl
+
+cd
+if [ ! -d "workshop-arduino-basics" ];
+then
+  echo "-------------------------------------------"
+  echo "Cloning Arduino Workshop repo"
+  echo "-------------------------------------------"
+  git clone https://github.com/vives-devbit/workshop-arduino-basics.git
+else
+  echo "Arduino Workshop dir already exists."
+  cd workshop-arduino-basics
+  git pull origin master
+fi
+
+echo "-------------------------------------------"
+echo "Downloading and installing arduino"
+echo "Using latest version - may fix lib manager"
+echo "-------------------------------------------"
+cd && curl -o arduino.tar.xz https://downloads.arduino.cc/arduino-1.8.19-linuxaarch64.tar.xz
+tar -xf arduino.tar.xz
+cd arduino-1.8.19
+./install.sh
+
+cd
+
+echo "-------------------------------------------"
+echo "Done ..."
+echo "-------------------------------------------"
+
+echo "----------------------------------------------";
+echo "                   _       _                      "
+echo "     /\\           | |     (_)                     "
+echo "    /  \\   _ __ __| |_   _ _ _ __   ___           "
+echo "   / /\\ \\ | '__/ _\` | | | | | '_ \\ / _ \\          "
+echo "  / ____ \\| | | (_| | |_| | | | | | (_) |         "
+echo " /_/    \\_\\_|__\\__,_|\\__,_|_|_| |_|\\___/          "
+echo " \\ \\        / /       | |      | |                "
+echo "  \\ \\  /\\  / /__  _ __| | _____| |__   ___  _ __  "
+echo "   \\ \\/  \\/ / _ \\| '__| |/ / __| '_ \\ / _ \\| '_ \\ "
+echo "    \\  /\\  / (_) | |  |   <\\__ \\ | | | (_) | |_) |"
+echo "     \\/  \\/ \\___/|_|  |_|\\_\\___/_| |_|\\___/| .__/ "
+echo "                                           | |    "
+echo "                                           |_|    "
+echo "----------------------------------------------";
+echo "Done with setup of Raspberry Pi system"
