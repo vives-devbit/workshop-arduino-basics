@@ -1201,6 +1201,7 @@ void loop() {
 - **Te droog?** Laat het alarm afgaan
 - **Ok?** Licht uit en alarm uit
 - Zorg dat je zowel temperatuur als vocht in grafiek kan tonen
+- Extra? In plaats van constant Alarm, kan je ook korte "tuut" geven?
 - Extra moeilijk? Alarm uitzetten met druk op de knop
 
 *Kies zelf maar wat te nat of te droog is. Experimenteer!*
