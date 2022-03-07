@@ -16,7 +16,7 @@ int B = 4275;       // B waarde van de thermistor
 int R0 = 100000;    // R0 = 100k weerstand
 
 /////////////////////////////////////////////////////////
-// Initializatie code
+// Initialisatie code
 // Wordt 1x uitgevoerd bij het opstarten
 /////////////////////////////////////////////////////////
 void setup() {
