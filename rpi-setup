@@ -68,6 +68,20 @@ fi
 
 cd
 
+if [ ! -f "~/Desktop/slides.desktop" ];
+then
+cat <<EOT >> "~/Desktop/slides.desktop"
+[Desktop Entry]
+Encoding=UTF-8
+Name=Arduino-Workshop
+Type=Link
+URL=https://vives-devbit.github.io/workshop-arduino-basics/slides.html
+Icon=text-html
+EOT
+else
+  echo "Shortcut already exists. Skipping"
+fi
+
 echo "-------------------------------------------"
 echo "Done ..."
 echo "-------------------------------------------"
