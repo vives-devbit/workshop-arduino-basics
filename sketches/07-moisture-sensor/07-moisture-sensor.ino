@@ -15,7 +15,7 @@
 void setup() {
 
   // Instellen van de snelheid waarmee we data naar de computer sturen
-  SerialUSB.begin(9600);
+  Serial.begin(9600);
 
   // Configureer A1 als analoge ingang
   pinMode(A1, INPUT);
@@ -30,8 +30,8 @@ void loop()
   // Eerst moeten we de analoge spanning meten (getal tussen 0 en 1023)
   int vochtgehalte = analogRead(A1);
 
-  SerialUSB.print("Grondvocht: ");
-  SerialUSB.println(vochtgehalte);
+  Serial.print("Grondvocht: ");
+  Serial.println(vochtgehalte);
 
   delay(1000);
 }

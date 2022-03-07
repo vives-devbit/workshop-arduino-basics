@@ -27,7 +27,7 @@ int teller = 0;
 void setup() {
 
   // Instellen van de snelheid waarmee we data naar de computer sturen
-  SerialUSB.begin(9600);
+  Serial.begin(9600);
 
   // pi aanpassen naar nauwkeurigere waarde
   pi = 3.1415;
@@ -44,25 +44,25 @@ void loop() {
 
   // Een String variabel uitprinten
   // met tekst vooraan
-  SerialUSB.print("Hallo, ik ben ");
-  SerialUSB.println(naam);
+  Serial.print("Hallo, ik ben ");
+  Serial.println(naam);
 
   // Een int variabel uitprinten en daarna
   // nog wat tekst erachter
-  SerialUSB.print("Ik ben ");
-  SerialUSB.print(leeftijd);
-  SerialUSB.println(" jaar oud.");
+  Serial.print("Ik ben ");
+  Serial.print(leeftijd);
+  Serial.println(" jaar oud.");
 
   // Een double variabel uitprinten met
   // een extra lege lijn ervoor en erachter
-  SerialUSB.println();
-  SerialUSB.print("PI = ");
-  SerialUSB.println(pi);
-  SerialUSB.println();
+  Serial.println();
+  Serial.print("PI = ");
+  Serial.println(pi);
+  Serial.println();
 
   // Een teller als variabel
-  SerialUSB.print("De variabel teller heeft de waarde ");
-  SerialUSB.println(teller);
+  Serial.print("De variabel teller heeft de waarde ");
+  Serial.println(teller);
 
   // Even wachten (1000ms = 1s)
   delay(1000);

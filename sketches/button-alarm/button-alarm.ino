@@ -14,7 +14,7 @@ int secondenIngedrukt = 0;
 void setup() {
 
   // Instellen van de snelheid waarmee we data naar de computer sturen
-  SerialUSB.begin(9600);
+  Serial.begin(9600);
 
   // Configureer D3 als een digitale ingang (de knop)
   pinMode(3, INPUT);
@@ -34,19 +34,19 @@ void loop() {
   if (knop == HIGH) {
     secondenIngedrukt = secondenIngedrukt + 1;    // 1 seconde bijtellen
 
-    SerialUSB.print("Je hebt de knop nu ");
-    SerialUSB.print(secondenIngedrukt);
-    SerialUSB.println(" seconden ingedrukt!");
+    Serial.print("Je hebt de knop nu ");
+    Serial.print(secondenIngedrukt);
+    Serial.println(" seconden ingedrukt!");
   } else {
     // Loslaten is actie ondernemen
 
     if (secondenIngedrukt >= 3) {
-      SerialUSB.println("We zetten het alarm aan");
+      Serial.println("We zetten het alarm aan");
       digitalWrite(4, HIGH);    // Uitgang (buzzer) aanzetten
     }
 
     if (secondenIngedrukt == 1) {
-      SerialUSB.println("We zetten het alarm uit");
+      Serial.println("We zetten het alarm uit");
       digitalWrite(4, LOW);    // Uitgang (buzzer) aanzetten
     }
 

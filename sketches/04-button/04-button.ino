@@ -15,7 +15,7 @@
 void setup() {
 
   // Instellen van de snelheid waarmee we data naar de computer sturen
-  SerialUSB.begin(9600);
+  Serial.begin(9600);
 
   // Configureer D3 als een digitale ingang
   pinMode(3, INPUT);
@@ -28,8 +28,8 @@ void setup() {
 void loop() {
 
   int knop = digitalRead(3);
-  SerialUSB.print("De toestand van de knop is: ");
-  SerialUSB.println(knop);
+  Serial.print("De toestand van de knop is: ");
+  Serial.println(knop);
 
   delay(1000);    // Even wachten (1000ms = 1s)
 

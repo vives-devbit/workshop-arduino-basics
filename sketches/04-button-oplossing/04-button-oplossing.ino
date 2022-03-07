@@ -15,7 +15,7 @@
 void setup() {
 
   // Instellen van de snelheid waarmee we data naar de computer sturen
-  SerialUSB.begin(9600);
+  Serial.begin(9600);
 
   // Configureer D2 als een digitale uitgang
   pinMode(2, OUTPUT);
@@ -31,8 +31,8 @@ void setup() {
 void loop() {
 
   int knop = digitalRead(3);
-  SerialUSB.print("De toestand van de knop is: ");
-  SerialUSB.println(knop);
+  Serial.print("De toestand van de knop is: ");
+  Serial.println(knop);
 
   // Zet de uitgang gelijk aan de stand van de knop
   digitalWrite(2, knop);
