@@ -1189,3 +1189,18 @@ void loop() {
 ---
 
 ![bg](./img/en_nu.jpg)
+
+---
+
+# Uitdaging - Planten Bewateren
+
+- Planten monitoren
+  - Grond vocht
+  - Omgevingstemperatuur
+- **Te nat?** Laat de rode LED branden
+- **Te droog?** Laat het alarm afgaan
+- **Ok?** Licht uit en alarm uit
+- Zorg dat je zowel temperatuur als vocht in grafiek kan tonen
+- Extra moeilijk? Alarm uitzetten met druk op de knop
+
+*Kies zelf maar wat te nat of te droog is. Experimenteer!*
