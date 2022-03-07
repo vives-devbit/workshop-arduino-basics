@@ -68,10 +68,10 @@ fi
 
 cd
 
-if [ ! -f "~/Desktop/slides.desktop" ];
+if [ ! -f "Desktop/slides.desktop" ];
 then
-touch "~/Desktop/slides.desktop"
-cat <<EOT > "~/Desktop/slides.desktop"
+touch "Desktop/slides.desktop"
+cat <<EOT > "Desktop/slides.desktop"
 [Desktop Entry]
 Encoding=UTF-8
 Name=Arduino-Workshop
