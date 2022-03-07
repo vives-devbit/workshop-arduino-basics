@@ -145,23 +145,25 @@ Campus Brugge Xaverianen
 - Je hebt officiële Arduino boards
 - Je hebt Arduino compatibele boards
 
-![bg fit left](./img/different-Arduino-board.jpg)
+![bg fit left:40%](./img/different-Arduino-board.jpg)
+
+*Kijk maar eens op [https://store.arduino.cc/collections/boards](https://store.arduino.cc/collections/boards).*
 
 ---
 
-# Wat is Arduino?
+# Aan de slag - Wat heb je nodig
 
-TODO: Wat is Arduino ? Wat is Arduino IDE
-TODO: Welke Arduino's bestaan er allemaal
-TODO: Wat is nu eigenlijk een microcontroller?
+- Een Arduino bordje
+  - Eventueel een starter kit
+  - Nu geruik je de [Arduino Uno Rev3 SMD](https://store.arduino.cc/collections/boards/products/arduino-uno-rev3-smd)
+- Een idee
+- Een computer
+  - Arduino IDE
+- Wat C++ kennis
 
----
+![bg fit right:30%](./img/arduino_uni_smd.jpg)
 
-# Wat is Arduino?
-
-TODO: Wat is Arduino ? Wat is Arduino IDE
-TODO: Welke Arduino's bestaan er allemaal
-TODO: Wat is nu eigenlijk een microcontroller?
+*De helft hiervan is gratis of heb je al!*
 
 ---
 
@@ -211,11 +213,12 @@ TODO: Wat is nu eigenlijk een microcontroller?
 ## Programmeren met Arduino
 
 - Arduino's programmeren doen we met C++
-  - ✅ Heel populair voor microcontroller
+  - ✅ Heel populair voor microcontrollers
   - ✅ Krachtig en snel
   - ❌ Niet de gemakkelijkste taal om mee te starten
+  - ✅ Gratis [IDE voor Arduino](https://www.arduino.cc/en/software)
 
-![bg left:40% fit](./img/arduino-programming.png)
+![bg left:35% fit](./img/arduino-programming.png)
 
 ---
 
@@ -226,7 +229,7 @@ TODO: Wat is nu eigenlijk een microcontroller?
 # Starten met "Hello World"
 
 - In de wereld van programmeren starten we altijd met "Hello World"
-  - Simpel programma
+  - Simpele applicatie die toch iets doet
   - Toont aan dat alles werkt
 
 ![bg right:30% fit](./img/hello_world.png)
@@ -245,9 +248,9 @@ TODO: Wat is nu eigenlijk een microcontroller?
 
 ## Hello World - Bord kiezen
 
-TODO: Kiezen van correcte board
-
-![bg right:40% fit](https://via.placeholder.com/150)
+- Bij 1ste keer programmeren moeten we het correcte bord kiezen
+- Selecteer `Arduino Uno` via `Hulpmiddelen => Board => Arduino AVR`
+- Selecteer `/dev/ttyACM0 (Arduino Uno)`
 
 ---
 
@@ -256,6 +259,7 @@ TODO: Kiezen van correcte board
 - Het programma dient eerst te worden gecompileerd
 - Vervolgens flashen we de computer instructies naar de microcontroller
 - Druk op de pijl naar rechts ➡️
+  - Dit compileert zowel als het flashen van het device
 
 ![bg right:30% fit](./img/01-hello-world-flash.png)
 
@@ -263,8 +267,8 @@ TODO: Kiezen van correcte board
 
 ## Hello World - Het resultaat
 
-- Het resultaat kunnen we zien in de seriele monitor
-- Klik op `Hulpmiddelen => Seriele monitor` of op het vergrootglas 🔎 rechts
+- Het resultaat kunnen we zien in de seriële monitor
+- Klik op `Hulpmiddelen => Seriële monitor` of op het vergrootglas 🔎 rechts
 
 
 ![bg right fit](./img/01-hello-world-monitor.png)
@@ -275,8 +279,8 @@ TODO: Kiezen van correcte board
 
 - `setup()`:
   - Wordt 1x uitgevoerd wanneer de microcontroller start
-  - Hier gaan we bv. hardware initializeren
-    - Zoals de "baudrate" (snelheid) zetten van de seriele poort
+  - Hier gaan we bv. hardware initialiseren
+    - Zoals de "baudrate" (snelheid) zetten van de seriële poort
       - `Serial.begin(9600);`
     - Dit is de connectie met de computer
 
@@ -288,7 +292,7 @@ TODO: Kiezen van correcte board
   - Wordt telkens opnieuw uitgevoerd
     - Heel snel na elkaar
     - Vandaar dat we een vertraging moeten plaatsen
-    - `delay(1000)`, betekent `1000ms` wachten
+    - `delay(1000)`, betekent `1000ms` of `1s` wachten
   - We kunnen ook tekst sturen naar de computer
     - `Serial.println("Hello World");`
     - Merk op dat we tekst tussen dubbele aanhalingstekens plaatsen `"..."`
@@ -299,7 +303,7 @@ TODO: Kiezen van correcte board
 
 - Probeer de hello world sketch aan te passen zodat:
   - Het jouw naam toont: `Hello World! Ik ben Nico`
-  - Er 2 seconden wordt gewacht tussen elk bericht in plaats van 1 seconde
+  - Er 5 seconden wordt gewacht tussen elk bericht in plaats van 1 seconde
   - Probeer volgende tekst op een nieuwe lijn toe te voegen
     - `Ik studeer land- en tuinbouw`
 
@@ -314,9 +318,8 @@ void loop() {
   Serial.println("Hello World! Ik ben Nico");
   Serial.println("Ik studeer land- en tuinbouw");
 
-  // Even wachten (2000ms = 2s)
-  delay(2000);
-
+  // Even wachten (5000ms = 5s)
+  delay(5000);
 }
 ```
 
@@ -328,7 +331,7 @@ void loop() {
 
 # Variabelen
 
-- Een variabel is een symbolische naam voor een geheugen locatie
+- Een variabel is een symbolische naam voor een geheugen locatie in een computer
 - Een variabel kan een getal, tekst, karakter, ... bevatten
 - Een variabel kan van waarde veranderen
 - We kunnen er ook bewerkingen op uitvoeren
@@ -339,7 +342,7 @@ void loop() {
 
 ## Variabelen - Declareren
 
-- Variabelen moeten we eerst declareren = creeren
+- Variabelen moeten we eerst declareren = kenbaar maken
 - We geven de variabel een **naam**
 - Geven ook aan welk **type** het is
 - En we kunnen ook een 1ste **waarde** meegeven
@@ -371,7 +374,7 @@ double pi = 3.14;
 - Types: `int`, `double`, `String` (er zijn er nog andere)
 - Kiezen van de naam
   - Geen spaties of speciale tekens
-  - Beschrijvend
+  - Beschrijvende en duidelijke naam
 
 ---
 
@@ -401,7 +404,8 @@ naam = "Chuck Norris";
 leeftijd = 35;
 ```
 
-- Merk op dat enkel de variabel naam links plaatsen (geen type)
+- Merk op dat we enkel de variabel naam links plaatsen (geen type)
+  - De variabel bestaat namelijk al
 - Als je deze nu opnieuw print zal je de nieuwe waarde zien
 
 ---
@@ -456,7 +460,7 @@ void setup() {
 }
 ```
 
-*`pi` is bij declaratie `3.14`, dan wordt `setup()` uitgevoerd en hier passen we de waarde aan naar `3.1415`*
+*`pi` is bij declaratie `3.14`, dan wordt `setup()` uitgevoerd en daar passen we de waarde aan naar `3.1415`*
 
 ---
 
@@ -579,7 +583,7 @@ void loop() {
 
 ## Hardware - Grove
 
-- Gestandardiseerd protype systeem
+- Gestandaardiseerd prototype systeem
 - Makkelijk connecteerbaar maken
 - Voorbeelden van code online
 - Bestaat uit
@@ -587,7 +591,9 @@ void loop() {
   - Module (sensoren - actuatoren)
   - 4-pins connector
 
-![bg right fit](./img/grove-modules.jpg)
+![bg right:45% fit](./img/grove-modules.jpg)
+
+[https://www.seeedstudio.com/](https://www.seeedstudio.com/)
 
 ---
 
@@ -636,8 +642,6 @@ void loop() {
 
 - Ga naar `Bestand => Openen` en selecteer `03-blinky`
 - Druk op de pijl naar rechts ➡️ om te compileren en flashen
-
-TODO: GIF van eindresultaat?
 
 *Meer informatie vind je op [https://wiki.seeedstudio.com/Grove-Red_LED/](https://wiki.seeedstudio.com/Grove-Red_LED/)*
 
@@ -1171,8 +1175,8 @@ void loop() {
   // Eerst moeten we de analoge spanning meten (getal tussen 0 en 1023)
   int vochtgehalte = analogRead(A1);
 
-  SerialUSB.println("Grondvocht: ");    // println !!
-  SerialUSB.println(vochtgehalte);
+  Serial.println("Grondvocht: ");    // println !!
+  Serial.println(vochtgehalte);
 
   delay(1000);
 }
@@ -1182,13 +1186,6 @@ void loop() {
 
 ![bg right:25% fit](./img/serial_plotter.png)
 
-<!-- ---
+---
 
-# TITEL
-
-- bullet
-- bullet
-- bullet
-- bullet
-
-![bg right fit](https://via.placeholder.com/150) -->
+![bg](./img/en_nu.jpg)
