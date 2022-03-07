@@ -51,7 +51,8 @@ else
   git pull origin master
 fi
 
-if [ ! -f "arduino.tar.xz" ]
+if [ ! -f "arduino.tar.xz" ];
+then
   echo "-------------------------------------------"
   echo "Downloading and installing arduino"
   echo "Using latest version - may fix lib manager"
