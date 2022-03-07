@@ -51,13 +51,14 @@ else
   git pull origin master
 fi
 
+cd
 if [ ! -f "arduino.tar.xz" ];
 then
   echo "-------------------------------------------"
   echo "Downloading and installing arduino"
   echo "Using latest version - may fix lib manager"
   echo "-------------------------------------------"
-  cd && curl -o arduino.tar.xz https://downloads.arduino.cc/arduino-1.8.19-linuxaarch64.tar.xz
+  curl -o arduino.tar.xz https://downloads.arduino.cc/arduino-1.8.19-linuxaarch64.tar.xz
   tar -xf arduino.tar.xz
   cd arduino-1.8.19
   ./install.sh
