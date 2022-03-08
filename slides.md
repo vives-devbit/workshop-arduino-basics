@@ -249,8 +249,8 @@ Campus Brugge Xaverianen
 ## Hello World - Bord kiezen
 
 - Bij 1ste keer programmeren moeten we het correcte bord kiezen
-- Selecteer `Arduino Uno` via `Hulpmiddelen => Board => Arduino AVR`
-- Selecteer `/dev/ttyACM0 (Arduino Uno)`
+- Selecteer `Arduino Uno` via `Hulpmiddelen => Board`
+- Selecteer `/dev/ttyACM0 (Arduino Uno)` via `Hulpmiddelen => Poort`
 
 ---
 
@@ -931,12 +931,12 @@ if (knop == HIGH) {
 
 ## Hardware - De Buzzer - Analyse
 
-- `digitalWrite(2, HIGH);`
-  - Hiermee maken we pin `2` hoog
+- `digitalWrite(4, HIGH);`
+  - Hiermee maken we pin `4` hoog
     - hoog = `1` of dus `5V`
     - de buzzer maakt geluid
-- `digitalWrite(2, LOW);`
-  - Hiermee maken we pin `2` laag
+- `digitalWrite(4, LOW);`
+  - Hiermee maken we pin `4` laag
     - laag = `0` of dus `0V`
     - de buzzer maakt geen geluid
 

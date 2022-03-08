@@ -47,7 +47,7 @@ void loop() {
 
     if (secondenIngedrukt == 1) {
       Serial.println("We zetten het alarm uit");
-      digitalWrite(4, LOW);    // Uitgang (buzzer) aanzetten
+      digitalWrite(4, LOW);    // Uitgang (buzzer) uitzetten
     }
 
     secondenIngedrukt = 0;    // Teller terug op 0 zetten
