@@ -155,7 +155,7 @@ Campus Brugge Xaverianen
 
 - Een Arduino bordje
   - Eventueel een starter kit
-  - Nu geruik je de [Arduino Uno Rev3 SMD](https://store.arduino.cc/collections/boards/products/arduino-uno-rev3-smd)
+  - Nu gebruik je de [Arduino Uno Rev3 SMD](https://store.arduino.cc/collections/boards/products/arduino-uno-rev3-smd)
 - Een idee
 - Een computer
   - Arduino IDE
